@@ -5,5 +5,5 @@ const btn = document.getElementById("click-me-btn");
 btn.addEventListener("click", ()=> {
     const randomColor = colors[Math.floor(Math.random()*colors.length)];  
     document.querySelector(".current-color").innerHTML = randomColor;
-    document.querySelector("main").style.background = randomColor;
+    document.querySelector("main").style.backgroundColor = randomColor;
 })
