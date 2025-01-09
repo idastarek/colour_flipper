@@ -22,7 +22,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: blanchedalmond;
+    background: blanchedalmond;
     height: 100vh;
 }
 
