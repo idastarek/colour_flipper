@@ -33,6 +33,10 @@ h1 {
     padding: 10px 30px;
 }
 
+.current-color {
+    color: #6B9AC4;
+}
+
 .btn {
     background-color: transparent;
     border-color: #000000;
