@@ -4,6 +4,12 @@ html, body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+nav {
+    box-shadow: 0 2px 15px grey;
+    position: relative;
+    z-index: 10;
+}
+
 .nav-center {
     display: flex;
     justify-content: space-around;
@@ -15,6 +21,10 @@ html, body {
     list-style: none;
     justify-content: space-around;
     width: 120px;
+}
+
+.nav-links a {
+    text-decoration: none;
 }
 
 main {
