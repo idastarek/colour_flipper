@@ -38,7 +38,7 @@ main {
 
 h1 {
     color: #ffffff;
-    background-color: #000000;
+    background-color: #264653;
     border-radius: 5px;
     padding: 10px 30px;
 }
@@ -49,9 +49,13 @@ h1 {
 
 .btn {
     background-color: transparent;
-    border: 2px solid #000000;
+    border: 2px solid #264653;
     border-radius: 5px;
     padding: 10px 30px;
+}
+
+.btn :hover {
+
 }
 
 

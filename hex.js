@@ -18,24 +18,23 @@ function generateRandomHexColor() {
     return randomHexColor;
 }
 
-// check if color is light or dark 
-function checkColorBrightness(hexColor) {
+// convert hex to RGB
+function hexToRgb(hexColor) {
     if (hexColor[0] === "#") {
         hexColor = hexColor.substring(1);
     }
-
-    // extract RGB components from the hex value
-    const r = parseInt(hexColor.substr(0,2), 16);
+    const r = parseInt(hexColor.substr(0, 2), 16);
     const g = parseInt(hexColor.substr(2, 2), 16);
     const b = parseInt(hexColor.substr(4, 2), 16);
-
-    // calculate the YIQ value
-    const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
-
-    // return "black" for dark colors and "white" for light colors
-    return (yiq >= 128) ? "white" : "black";
+    return { r, g, b };
 }
 
+// Check if color is light or dark
+function checkColorBrightness(hexColor) {
+    const { r, g, b } = hexToRgb(hexColor);
+    const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+    return (yiq >= 128) ? "light" : "dark";
+}
 
 // add a click event listener to the button
 btnHex.addEventListener("click", ()=> {
@@ -46,11 +45,13 @@ btnHex.addEventListener("click", ()=> {
 
     // check if the color is dark or light to decide the button tex color
     const darkOrLight = checkColorBrightness(randomHexColor);
-    if (darkOrLight === "black") {
-        btnHex.style.color = "#ffffff";
-        btnHex.style.borderColor = "#ffffff"
+    if (darkOrLight === "dark") {
+        btnHex.style.color = "#fefae0";
+        btnHex.style.borderColor = "#fefae0"
     } else {
-        btnHex.style.color = "#000000";
-        btnHex.style.borderColor = "#000000";
+        btnHex.style.color = "#264653";
+        btnHex.style.borderColor = "#264653";
     }
+
 });
+
