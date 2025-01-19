@@ -1,3 +1,5 @@
+// index.html logic
+
 const colors = ["green", "blue", "pink", "rgba(123, 122, 200)", "#15025"];
 const btn = document.getElementById("click-me-btn");
 
@@ -7,3 +9,8 @@ btn.addEventListener("click", ()=> {
     document.querySelector(".current-color").innerHTML = randomColor;
     document.querySelector("main").style.backgroundColor = randomColor;
 })
+
+
+
+
+
