@@ -48,7 +48,9 @@ btnHex.addEventListener("click", ()=> {
     const darkOrLight = checkColorBrightness(randomHexColor);
     if (darkOrLight === "black") {
         btnHex.style.color = "#ffffff";
+        btnHex.style.borderColor = "#ffffff"
     } else {
         btnHex.style.color = "#000000";
+        btnHex.style.borderColor = "#000000";
     }
 });
