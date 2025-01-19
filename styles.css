@@ -51,11 +51,16 @@ h1 {
     background-color: transparent;
     border: 2px solid #264653;
     border-radius: 5px;
-    padding: 10px 30px;
+    padding: 15px 30px;
+    width: 180px;
+    color: #264653;
 }
 
-.btn :hover {
-
+.btn:hover {
+    border: 3px solid #264653;
 }
 
+.btn:focus {
+    box-shadow: 3px 3px 10px grey;
+}
 

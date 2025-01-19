@@ -1,6 +1,7 @@
 // hex.html logic
 
 const btnHex = document.getElementById("click-me-btn-hex");
+const saveBtn = document.getElementById("save-btn");
 
 
 // generate a random hex color
@@ -36,6 +37,14 @@ function checkColorBrightness(hexColor) {
     return (yiq >= 128) ? "light" : "dark";
 }
 
+// set button colors
+function setButtonColors(color) {
+    btnHex.style.color = color;
+    btnHex.style.borderColor = color;
+    saveBtn.style.color = color;
+    saveBtn.style.borderColor = color;
+}
+
 // add a click event listener to the button
 btnHex.addEventListener("click", ()=> {
     // generate a random hex color and update the html
@@ -46,12 +55,9 @@ btnHex.addEventListener("click", ()=> {
     // check if the color is dark or light to decide the button tex color
     const darkOrLight = checkColorBrightness(randomHexColor);
     if (darkOrLight === "dark") {
-        btnHex.style.color = "#fefae0";
-        btnHex.style.borderColor = "#fefae0"
+        setButtonColors("#fefae0");
     } else {
-        btnHex.style.color = "#264653";
-        btnHex.style.borderColor = "#264653";
+        setButtonColors("#264653");
     }
-
 });
 
